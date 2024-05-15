@@ -1,0 +1,60 @@
+.text-site-light{
+    color: #851cfd!important;
+}
+.btn-bg-light{
+    background: linear-gradient(#FDAE8F, #851cfd);
+}
+.btn-bg-dark{
+    background: #030812;
+}
+.btn-bg-secondary{
+    background: #3C485D;
+}
+.btn-radius{
+    border-radius: 24px;
+}
+.radius{
+    border-radius: 24px;
+}
+
+.text-site-gradient{
+    color: #851cfd!important;
+}
+.bg-site-image{
+    height: 80dvh;
+    background-size: cover;
+    background-image: url("../images/fundal.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.title h2{
+    font-size: 50px;
+}
+.bg-card{
+    background: rgba(53, 57, 65, 0.41)!important;
+}
+.icons .fa-heart{
+    cursor: pointer;
+}
+.header-title{
+    font-size: 48px;
+    text-align: center;
+}
+.header-description{
+    font-size: 20px;
+}
+.swiper-pagination{
+    background-color: white;
+    
+}
+@media screen and (max-width: 992px) {
+    .bg-site-image{
+        background-size: 100%;
+        background-position: top;
+    }
+    .title h2{
+        font-size: 40px;
+    }
+}
