@@ -1,8 +1,8 @@
 .text-site-light{
     color: #851cfd!important;
 }
-.btn-bg-light{
-    background: linear-gradient(#FDAE8F, #851cfd);
+.btn-bg-light {
+    background: linear-gradient(#FDAE8F, #fd1c1c);
 }
 .btn-bg-dark{
     background: #030812;
@@ -35,9 +35,7 @@
 .bg-card{
     background: rgba(53, 57, 65, 0.41)!important;
 }
-.icons .fa-heart{
-    cursor: pointer;
-}
+
 .header-title{
     font-size: 48px;
     text-align: center;
@@ -49,6 +47,38 @@
     background-color: white;
     
 }
+
+
+
+.footer-contact-section {
+    display: flex;
+    justify-content:center;
+    padding: 20px;
+}
+.footer-contact-section svg {
+    fill: white; 
+    width: 40px; 
+    height: 40px; 
+}
+.phone, .offices, .mail {
+    text-align: center;
+}
+.line {
+    width: 500px;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+}
+.line.right {
+    margin-right: 0;
+    margin-left: auto;
+}
+.detail {
+    margin-top: 10px;
+}
+.detail span, .detail a {
+    display: block;
+}
 @media screen and (max-width: 992px) {
     .bg-site-image{
         background-size: 100%;
@@ -57,4 +87,34 @@
     .title h2{
         font-size: 40px;
     }
+}
+
+
+//About
+
+.image-container {
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    padding-left: 20px;
+}
+
+.icon-container {
+    justify-content: center;
+}
+
+.icon-item {
+    text-align: center;
+    margin-left: 90px;
+ 
+}
+.icon-item img {
+    width: 100px; 
 }
