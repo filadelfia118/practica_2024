@@ -76,15 +76,16 @@
 .detail span, .detail a {
     display: block;
 }
-@media screen and (max-width: 992px) {
-    .bg-site-image{
-        background-size: 100%;
-        background-position: top;
-    }
-    .title h2{
-        font-size: 40px;
-    }
-}
+// @media screen and (max-width: 992px) {
+//     .bg-site-image{
+//         background-size: 100%;
+//         background-position: top;
+//     }
+//     .title h2{
+//         font-size: 40px;
+//     }
+// }
+
 //About
 .image-container {
     margin-right: 20px;
@@ -169,3 +170,119 @@
     margin-left: 96px;
     margin-right: 0;
   }
+  .contacts{
+    margin-top: 20px;
+    color: white;
+  }
+  .contacts .card{
+    margin-bottom: 25px;
+    background: linear-gradient(#FDAE8F, #fd1c1c);
+  }
+
+  /* Responsivitatea */
+@media screen and (max-width: 992px) {
+    .bg-site-image {
+        height: auto;
+        background-size: cover;
+        background-position: top;
+        padding: 20px 0;
+    }
+    
+    .title h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .header-title {
+        font-size: 36px;
+    }
+    
+    .header-description {
+        font-size: 18px;
+    }
+    
+    
+    .footer-contact-section {
+        padding: 2px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .line {
+        width: 100%;
+    }
+    
+    .image-container {
+        margin: 0 auto;
+    }
+    
+    .text-container {
+        padding: 0;
+    }
+    
+    .icon-container {
+        flex-wrap: wrap;
+    }
+    
+    .img-fluid{
+        display: none;
+    }
+    .contact-form-image {
+        display: none;
+     }
+    
+    .contact-info-map,
+    .contact-form-image {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .contact-info-map iframe {
+        width: 100%;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-info-map {
+        float: none;
+        margin: 20px auto;
+    }
+    
+    .form {
+        flex-direction: column;
+    }
+    
+    
+}
+
+@media screen and (max-width: 392px) {
+    .bg-site-image {
+        padding: 10px;
+    }
+    
+    .title h2 {
+        font-size: 30px;
+    }
+    
+    .header-title {
+        font-size: 24px;
+    }
+    
+    .header-description {
+        font-size: 16px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 5px;
+    }
+}

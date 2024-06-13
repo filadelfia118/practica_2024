@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Header -->
-<header>
+<header id="home">
     <div class="container-fluid d-flex align-items-center justify-content-center  bg-site-image">
         <div class=" text-center col-lg-6">
             <h1 class=" text-white mb-5 header-title">
@@ -27,7 +27,7 @@
 </header>
 <!-- End Header -->
 <!-- About -->
-<section class=" my-lg-2">
+<section  id="about" class=" my-lg-2 ">
     <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5 mb-0">
         <h2 class="text-white">About Them
         </h2>
@@ -74,7 +74,7 @@
 
 <!-- End About Them -->
 <!-- Gallery -->
-<section class="collections my-5 py-5">
+<section id="gallery" class=" my-lg-2">
     <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
         <h2 class="text-white text-center text-lg-start">Gallery</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
@@ -82,78 +82,10 @@
             Explore All
         </a>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-card radius">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                        </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex author flex-row align-items-center">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-card radius">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                        </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex author flex-row align-items-center">
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-card radius">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                            <img src="{{ asset('assets/images/gallery/im1.png') }}" class="w-50 p-2 radius" alt="Metaverse">
-                        </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex author flex-row align-items-center">
-                               
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h5 class="text-white mb-0">Metaverse</h5>
-                                    <p class="text-secondary mb-0">Created by <span class="text-white">John Doe</span></p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 <!-- End Gallery -->
 <!-- Contact Them -->
-<section class=" my-5 py-5">
+<section id="contact" class=" my-0 py-0  ">
     <div class="container title d-flex flex-column justify-content-between align-items-center flex-lg-row my-5">
         <h2 class="text-white text-center text-lg-start">Contact Them</h2>
         <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
@@ -180,7 +112,8 @@
 
     <div class=" container form">
         <div>
-            <form action="" method="post" class="contact-form">
+            <form action="{{ route('contact.store') }}" method="post" class="contact-form">
+                @csrf
                 <h3 style="color: white;">Scrieți un mesaj</h3>
                 <label for="name">Numele dumneavoastră</label>
                 <input type="text" id="name" name="name" required>
@@ -193,9 +126,11 @@
           
                 <label for="message">Mesajul dumneavoastră</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                <a href="#" class="btn btn-bg-light text-white px-4 py-2 me-3">
-                    <i class=""></i>
-                     Submit
+                <button type="submit" class="btn btn-bg-light text-white px-4 py-2 me-3">
+                    <i class=""></i> Submit
+                </button>
+                <a  href="/contacts" class="btn btn-bg-light text-white px-4 py-2 me-3">
+                    <i class=""></i> See the messages
                 </a>
             </form>
         </div>
