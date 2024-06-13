@@ -29,10 +29,10 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link active" href="#">About</a>
-                        <a class="nav-link active" href="#">Gallery</a>
-                        <a class="nav-link active" href="#">Contact us</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link active" href="#about">About</a>
+                        <a class="nav-link active" href="#gallery">Gallery</a>
+                        <a class="nav-link active" href="#contact">Contact us</a>
                         <a href="/login" class="btn btn-bg-light text-white px-4 py-2 me-3">
                             <i class=""></i>
                             Log In
@@ -49,11 +49,9 @@
     </div>
 
     @yield('content')
-
-    
     <footer class="mt-5 text-white d-flex align-items-center justify-content-center  ">
         <div class="d-flex flex-column">
-          <nav class="navbar navbar-expand-lg  " data-bs-theme="dark">
+          <nav class="navbar  " data-bs-theme="dark">
             <div class="container ">
                 <a class="navbar-brand" href="{{ route('guest.index') }}">
                     <img src="{{ asset('assets/images/MilavLogoWhiteSmall2.png') }}" alt="Logo" class="logo">
@@ -108,7 +106,6 @@
                       Harghita, Romania</span>
                   </div>
                 </div>
-          
                 <div class="offices">
                   <hr class="line">
                   <svg version="1.1" id="Capa_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -214,7 +211,6 @@
                 </p>
             </div>
         </div>
-        
     </footer>
 </body>
 </html>
